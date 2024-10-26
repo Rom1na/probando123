@@ -1,0 +1,272 @@
+
+:root{
+    
+    /* paleta de colores */
+
+  --texto: #401818;
+  --bgGeneral:#F2F2EB;  
+  --bgCard: #A8644B;
+  --navbarC:  #72383D;
+ 
+
+}
+
+
+
+body{
+  font-family:"Literata";
+  font-size: 14px;
+  margin: 0; 
+  background-color:var(--bgGeneral); 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: var(--navbarC);
+    color:var(--texto);
+    box-shadow: 2px 2px 5px hsla(0, 0%,0%, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.tituloppal{
+    color: var(--bgGeneral);
+    text-shadow: var(--texto) 1px 0 10px;
+}
+.tituloppal a{
+    text-decoration: none;
+    color: var(--bgGeneral);
+}
+
+nav ul {
+    list-style: none;
+    display: flex; /* Flexbox para alinear horizontalmente los <li> */
+    gap: 15px;    /* Espacio entre los <li> */
+    padding: 0;
+    margin: 0;
+}
+
+nav p{
+
+    color:var(--bgGeneral);
+    text-decoration: none;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+        
+}
+
+.dropdown a{
+    display: block;
+    text-decoration: none;
+    padding: 10px 15px;
+
+
+
+}
+
+.dropdown .contenido{
+    display: none;
+    background-color:var(--navbarC);
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px hsla(0, 0%,0%, 0.8);
+
+
+
+}
+
+.dropdown:hover .contenido{
+    display: block;
+
+    
+
+}
+
+nav p:hover{
+    background-color: var(--texto);
+    border-radius: 4px;
+
+}
+
+
+nav ul li {
+    display: flex; /* Alineación en el centro de cada <li> */
+    align-items: center;
+    color:var(--texto);
+}
+
+nav ul li a {
+    color: var(--bgGeneral);
+    text-decoration: none;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+nav ul li a:hover {
+    background-color:var(--texto);
+    border-radius: 4px;
+}
+
+.titDisplay{
+    margin: 0;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color:var(--texto);
+    background-color:var(--bgGeneral);
+
+}
+
+
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    background-color:var(--bgGeneral);
+
+
+
+}
+
+.productoCard{
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px hsla(0, 0%,0%, 0.8);
+  
+}
+
+.productoCard img{
+ height: 200px;
+ width: 180px;
+ padding-left: 30%;
+}
+
+
+.productoCard .precio{
+  color: black;
+  font-size: 14px;
+  font-weight: bolder;
+ 
+
+} 
+
+.productoCard .categoria{
+  font-style: italic;
+  font-weight: bolder;
+  color: var(--navbarC);
+  font-size: small;
+  text-align: right;
+  margin-bottom: 1px;
+}
+
+.productoCard .descripcion{
+   color: var(--texto); 
+   flex-grow: 1; /* El texto de descripción toma el espacio sobrante */
+   margin-bottom: 16px;
+   overflow: hidden;
+}
+
+.productoCard button{
+  background-color: var(--bgGeneral);
+  border-color:var(--bgGeneral);
+  border-radius: 5px;
+  color: var(--texto);
+  font-family: inherit;
+  padding: 8px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px hsla(0, 0%,0%, 0.8);  
+}
+
+.productoCard button:hover{
+    font-weight: bold;
+}
+
+.subBtn{
+    background-color: var(--bgGeneral);
+    border-color:var(--bgGeneral);
+    color: var(--texto);
+    font-family: inherit;
+    padding: 8px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px hsla(0, 0%,0%, 0.8);  
+   
+
+
+}
+
+.subBtn:hover{
+    font-weight: bold;
+    
+}
+
+form input{
+    margin-bottom: 5px;
+}
+
+form textarea{
+    width: 80%;
+}
+
+
+
+
+/* pantallas más pequeñas */
+
+@media screen and (max-width: 768px) {
+
+.productoCard{
+  width: 100%;  
+}
+
+
+
+nav ul {
+    display:flex;
+    flex-direction: column;
+    padding: auto;
+}
+nav p{
+  margin: 0;  
+}
+.titDisplay{
+   margin-left: 0; 
+   text-align:center
+
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 1200px){
+
+
+    .productoCard{
+        width: 55%;
+        margin-left: 25%;  
+      }
+
+      .titDisplay{
+        margin-left: 0; 
+        text-align:center
+     
+     }  
+      
+
+
+}

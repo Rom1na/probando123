@@ -25,10 +25,32 @@ function generarEstructuraProductos(productos) {
         descripcion.className = 'descripcion';
         descripcion.textContent = producto.descripcion;
 
-        // Crear el precio del producto
+        // Añadir título, imagen y descripción a la card
+        productoCard.appendChild(nombreProducto);
+        productoCard.appendChild(imgProducto);
+        productoCard.appendChild(descripcion);
+
+        // Contenedor "linea" para precio y reseña
+        const linea = document.createElement('div');
+        linea.className = 'linea';
+
+        // Precio
         const precio = document.createElement('p');
         precio.className = 'precio';
         precio.textContent = `$ ${producto.precio}`;
+        linea.appendChild(precio);
+
+        // Reseña con estrellas
+        const reseña = document.createElement('div');
+        reseña.className = 'rev';
+        const enlaceReseña = document.createElement('a');
+        enlaceReseña.href = 'joyeria.html';
+        enlaceReseña.innerHTML = `${producto.res} <i class="fa fa-star"></i>`;
+        reseña.appendChild(enlaceReseña);
+        linea.appendChild(reseña);
+
+        // Añadir el contenedor "linea" a la card, después de la descripción
+        productoCard.appendChild(linea);
 
         // Crear el footer del contenedor con el botón y la categoría
         const footerContenedor = document.createElement('div');
@@ -44,9 +66,6 @@ function generarEstructuraProductos(productos) {
         iconoCarrito.setAttribute('aria-hidden', 'true');
         botonAgregar.appendChild(iconoCarrito);
 
-
-
-
         const categoria = document.createElement('p');
         categoria.className = 'categoria';
         categoria.textContent = producto.categoria;
@@ -55,10 +74,7 @@ function generarEstructuraProductos(productos) {
         footerContenedor.appendChild(botonAgregar);
         footerContenedor.appendChild(categoria);
 
-        productoCard.appendChild(nombreProducto);
-        productoCard.appendChild(imgProducto);
-        productoCard.appendChild(descripcion);
-        productoCard.appendChild(precio);
+        // Añadir el footer a la card
         productoCard.appendChild(footerContenedor);
 
         // Añadir la card del producto al contenedor principal
@@ -67,29 +83,57 @@ function generarEstructuraProductos(productos) {
 
     // Agregar el contenedor principal al body (o a otro contenedor en el DOM)
     document.body.appendChild(contenedorPrincipal);
+
+
+    crearFooterRedesSociales(); 
+
+
+
+
+
+
 }
 
-// Ejemplo de productos para usar la función
-/* const productos = [
-    {
-        nombre: "Mens Casual Premium Slim Fit T-Shirts",
-        imagen: "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
-        descripcion: "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing.",
-        precio: 22.3,
-        categoria: "men's clothing"
-    },
-    {
-        nombre: "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
-        imagen: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
-        descripcion: "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl.",
-        precio: 695,
-        categoria: "bijouterie"
-    }
-]; */
 
-/* Llamar a la función para generar las cards
-generarEstructuraProductos(productos);
- */
+function crearFooterRedesSociales() {
+    // Crear el elemento footer
+    const footer = document.createElement('footer');
+    footer.id = 'sm-footer';
+
+    // Lista de redes sociales y sus URLs
+    const redesSociales = [
+        { url: 'https://www.facebook.com', icono: 'fa fa-facebook' },
+        { url: 'https://www.instagram.com', icono: 'fa fa-instagram' },
+        { url: 'https://www.twitter.com', icono: 'fa fa-twitter' },
+        { url: 'https://youtube.com', icono: 'fa fa-youtube' }
+    ];
+
+    // Crear cada enlace de red social y añadirlo al footer
+    redesSociales.forEach(red => {
+        const enlace = document.createElement('a');
+        enlace.href = red.url;
+        enlace.target = '_blank'; // Abre el enlace en una nueva pestaña
+
+        const icono = document.createElement('i');
+        icono.className = red.icono;
+
+        enlace.appendChild(icono); // Añadir el icono al enlace
+        footer.appendChild(enlace); // Añadir el enlace al footer
+    });
+
+    // Añadir el footer al body (o a otro contenedor en el DOM)
+    document.body.appendChild(footer);
+}
+
+
+
+
+
+
+
+
+
+
 
 async function traerQuerie(url,source){
 
@@ -118,6 +162,7 @@ function formatearProductos (data){
         descripcion: a.description,
         precio : a.price,
         categoria: a.category,
+        res: a.rating.rate,
 
     }) 
     );

@@ -18,6 +18,7 @@ body{
   font-size: 14px;
   margin: 0; 
   background-color:var(--bgGeneral); 
+  
 }
 
 header {
@@ -135,10 +136,126 @@ nav ul li a:hover {
     justify-content: space-between;
     padding: 10px;
     background-color:var(--bgGeneral);
+    
 
 
 
 }
+
+
+.contNos{
+        margin:40px;
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 300px, 300px;
+        gap: 50px;
+        margin-bottom: 100px;
+        align-self: center;
+        justify-self: center;
+        padding: 15px;
+        
+      }
+
+ 
+            
+ .contNos .txt {
+    
+    
+     padding: 30px;
+     align-self: center;
+     justify-self: center;
+      
+      }
+    
+
+.mapContainer{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    margin: 0;  
+   
+
+}
+
+.contReviews{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: white;
+    padding: 15px;
+    width: 55%;
+    margin-left: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 55px;
+    
+}
+
+.contReviews h3 {
+  padding-left: 10px;
+}
+
+.cont{
+  display: flex;
+  justify-content: center;
+
+}
+.prodRev{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 50px;   
+  width: 100%;
+}
+
+.contReviews h3{
+  text-align: center;
+  
+}
+
+
+
+.nombre{
+ font-weight: 700;
+ margin-bottom: 5px;
+}
+
+
+
+.review{
+  padding-top: 55px;
+  gap: 10px;  
+  width: 50%;
+  display: grid;
+  grid-template-areas:  
+  'headRev rating' 
+  'headRev rating'
+  'revTexto revTexto';
+  
+}
+
+.headRev{
+ grid-area: headRev; 
+ 
+ 
+}
+
+.revTexto{
+ grid-area: revTexto;
+ padding-right: 5px;
+  
+}
+
+.rating {
+  grid-area: rating;
+  color: #FFD700; /* Color dorado para las estrellas */
+  font-size: 1.5rem; /* Tamaño de las estrellas */
+  display: flex;
+  align-items: flex-start;
+  gap: 0.2rem;
+  width: 50%;
+}
+
 
 .productoCard{
     background-color:white;
@@ -156,6 +273,35 @@ nav ul li a:hover {
  height: 200px;
  width: 180px;
  padding-left: 30%;
+}
+
+.productoCard .rev{
+    background-color:var(--navbarC);
+    width: 50px;
+    height: 25px;
+    margin-right: 15px;
+    margin-top: 16px;
+    border-radius: 5px;
+    text-align: center;
+    text-justify: auto;
+    color: var(--bgGeneral);
+    cursor: pointer;
+    
+    
+}
+.rev a{
+  color: var(--bgGeneral);
+  text-decoration: none;
+}
+
+.productoCard .rev:hover{
+    box-shadow: 2px 2px 5px hsla(0, 0%,0%, 0.8);
+    
+
+}
+.txt {
+    padding-right: 1em;
+    padding-left: 2em;
 }
 
 
@@ -198,6 +344,14 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
+
+.linea {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
 .subBtn{
     background-color: var(--bgGeneral);
     border-color:var(--bgGeneral);
@@ -224,8 +378,58 @@ form textarea{
     width: 80%;
 }
 
+.box{
+    width: 400px;
+    height: 276px;
+    background-image: url("/img/shop400x276.jpg");
+    background-size: cover;
+    margin: 0;
+    border: 1px solid var(--navbarC);
+    box-shadow: 2px 2px 5px hsla(0, 0%,0%, 0.8);
+    align-self: center;
+    justify-self: center;
+
+}
+
+.txtimg{
+    position: relative;
+    top: 2px;
+    left:10px;
+    font-family: inherit;
+    font-weight: bold;
+    color: var(--texto);
+    padding-bottom: 0;
+    text-shadow: 2px 2px 5px hsla(0, 0%,0%, 0.4); ;
+
+}
 
 
+#sm-footer {
+    
+    bottom: 0; 
+    background-color: var(--navbarC);
+    width: 100vw; 
+    height: 2.1em; 
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.3rem; 
+    
+  }
+  
+  #sm-footer a {
+    color: var(--bgGeneral); 
+    text-decoration: none;
+    padding: 10px; 
+  }
+  
+
+  
+
+
+
+
+
+  
 
 /* pantallas más pequeñas */
 
@@ -235,6 +439,24 @@ form textarea{
   width: 100%;  
 }
 
+.box{
+  margin: 0;  
+  
+}
+
+.contNos{
+  margin:10px;
+  width: 80%;  
+  grid-template-columns: repeat(1,1fr);
+  padding: 0;
+}
+
+.mapContainer{
+     
+    display: flex;
+    margin-left: 25px;
+   
+}
 
 
 nav ul {
@@ -251,6 +473,16 @@ nav p{
 
 }
 
+.contReviews{
+  flex-direction: column;
+  width: 75%;
+}
+
+.review{
+  width: 100%;
+}
+
+
 }
 
 @media (min-width: 768px) and (max-width: 1200px){
@@ -266,7 +498,27 @@ nav p{
         text-align:center
      
      }  
+     .mapContainer{
+  
+        display: flex;
+        margin-left: 300px;
+       
+    }
+    
+     
+
       
+      .contNos{
+        margin:10px;
+        width: 80%;
+        grid-template-columns: 100%;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+      }
+      
+
+
 
 
 }

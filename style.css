@@ -463,9 +463,7 @@ form textarea{
 /* pantallas más pequeñas */
 
 @media screen and (max-width: 600px) {
-body{
-  width:110%;
-}   
+
     
 .productoCard{
   width: 100%;  

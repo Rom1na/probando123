@@ -20,12 +20,12 @@ Cada producto es presentado en una card con los siguientes elementos:
 - categoría a la que pertenece el producto.
 
 
-***Comentarios***
+***Comentarios:***
 
 El index esta hecho enteramente en html y css (Como vimos en clase)
-En otras partes utilice un poco de Javascript para poder dimamizar ciertas tareas repetitivas.
+En otras partes utilice un poco de Javascript para poder dinamizar ciertas tareas repetitivas.
 Las categorías del catálogo, o el encabezado de las reseñas y así poder reutilizar las estructuras.
-El form fue hecho usando  como action una página de agradecimiento.
-por lo to tanto todas la información del submit aparece en la url. 
+El form fue hecho usando  como action una página de agradecimiento,
+por lo tanto todas la información del submit aparece en la url. 
 No quise modificar los  campos submit  que no utilizo (y asi evitar que aparezcan)
 porque quise respectar la estructura del formulario utlizada en clase.

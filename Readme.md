@@ -2,7 +2,7 @@
 ## Trabajo práctico curso  Front End JS - Talento Tech Primer Cuatrimestre Tech 2024
 
 
-Este repositorio alója el trabajo práctico del curso de Front End de Talento Tech 2024 
+Este repositorio aloja el trabajo práctico del curso de Front End de Talento Tech 2024 
 La consigna es hacer una estructura que emule un comercio electrónico.
 En mi caso elegí utilizar la api pública fake api store  para  los productos.
 [FAKE API STORE](https://fakestoreapi.com/) 

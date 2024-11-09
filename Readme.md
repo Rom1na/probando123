@@ -20,7 +20,8 @@ Cada producto es presentado en una card con los siguientes elementos:
 - categoría a la que pertenece el producto.
 
 
-***Apostillas***
+***Comentarios***
+
 El index esta hecho enteramente en html y css (Como vimos en clase)
 En otras partes utilice un poco de Javascript para poder dimamizar ciertas tareas repetitivas.
 Las categorías del catálogo, o el encabezado de las reseñas y así poder reutilizar las estructuras.

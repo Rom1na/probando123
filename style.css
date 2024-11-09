@@ -462,14 +462,14 @@ form textarea{
 
 /* pantallas más pequeñas */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
 
 .productoCard{
   width: 100%;  
 }
 
 .box{
-  margin: 0;  
+  width: 80%; 
   
 }
 
@@ -505,6 +505,22 @@ nav p{
   width: 100%;
 }
 
+.mapContainer{
+  
+  width: 80%;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  margin: 0;  
+  padding-bottom:150px ;
+ 
+}
+
+
+
+
+
+
 
 }
 
@@ -523,22 +539,30 @@ nav p{
      }  
      .mapContainer{
   
-        display: flex;
-        margin-left: 300px;
-       
+      width: 80%;
+      display: flex;
+      align-self: center;
+      justify-self: center;
+      margin: 0;  
+      padding-bottom:150px ;
+     
+    }
+
+    
+    .box{
+      width: 80%; 
+      
     }
     
-     
-
-      
-      .contNos{
-        margin:10px;
-        width: 100%;
-        grid-template-columns: 100%;
-        justify-content: center;
-        margin: 0;
-        padding: 0;
-      }
+    
+    .contNos{
+      margin:10px;
+      width: 100%;
+      grid-template-columns: 100%;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+     }
       
 
 

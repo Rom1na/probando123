@@ -16,6 +16,44 @@
 
     <title>Contacto</title>
 </head>
+<script>
+    function setHeader(){
+     const urlParams = new URLSearchParams(window.location.search);    
+     const nombre = urlParams.get('Nombre');
+     
+ 
+     if (nombre){
+        document.getElementById('nom').textContent =`Muchas gracias ${nombre},hemos registrado su mensaje y responderemos a la brevedad`
+ 
+ 
+     }else{
+         document.getElementById('nom').textContent =`Muchas gracias!,hemos registrado su mensaje y responderemos a la brevedad`  
+ 
+     }
+ 
+ 
+ 
+     
+     
+ 
+    }
+
+  document.addEventListener('DOMContentLoaded',function() {
+
+    setHeader();
+
+  });  
+ 
+    
+ 
+ 
+    
+ </script>
+
+
+
+
+
 
 <body>
     <header>
@@ -47,26 +85,17 @@
     <div class="contenedor">
 
          <div class="productoCard">
-             <form action="contacto2.html">
              
-               
-                <label for="Nombre">Nombre:</label><br>
-                <input type="text" id="Nombre" name="Nombre" ><br>
-                <label for="Apellido">Apellido:</label><br>
-                <input type="text" id="Apellido" name="Apellido" ><br>
-                <label for="email">Ingrese su Email: </label><br>
-                <input type="email" name="email" id="email" > <br>
-                <textarea name="textarea" rows="10" cols="50">Escriba su mensaje</textarea>
+                <p class="descripcion" id="nom"></p>
                 
-                <br><br><br>
 
 
 
 
             <div class="footercontenedor">
             
-                <input type="submit" class="subBtn" value="Enviar Formulario">
-                <p class="categoria">Su opinón nos ayuda a mejorar</p>
+                <div class="subBtn2"><a href="index.html"> Volver</a></div>
+                <p class="categoria">Muchas gracias por sus comentarios</p>
                 
             </div>
 
@@ -95,4 +124,3 @@
     
 </body>
         
-         

@@ -203,7 +203,7 @@ nav ul li a:hover {
 }
 .prodRev{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   margin-bottom: 50px;   
   width: 100%;
 }
@@ -211,6 +211,11 @@ nav ul li a:hover {
 .contReviews h3{
   text-align: center;
   
+}
+
+.contReviews #imgprodu{
+  padding: 1em;
+  justify-self: center;
 }
 
 
@@ -224,7 +229,6 @@ nav ul li a:hover {
 
 .review{
   padding-top: 55px;
-  gap: 10px;  
   width: 50%;
   display: grid;
   grid-template-areas:  
@@ -242,7 +246,9 @@ nav ul li a:hover {
 
 .revTexto{
  grid-area: revTexto;
- padding-right: 5px;
+ margin-right: 15px;
+ 
+
   
 }
 
@@ -365,7 +371,30 @@ nav ul li a:hover {
 
 }
 
-.subBtn:hover{
+.subBtn2{
+  background-color: var(--bgGeneral);
+  border-color:var(--bgGeneral);
+  width: 45px;
+  color: var(--texto);
+  text-decoration: none;
+  font-family: inherit;
+  padding: 8px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px hsla(0, 0%,0%, 0.8);  
+
+}
+
+.subBtn2 a{
+  text-decoration: none;
+  color: var(--texto);
+  
+}
+
+.subBtn2:hover{
+  font-weight: bold;  
+}
+
+.subBtn :hover{
     font-weight: bold;
     
 }
@@ -381,7 +410,7 @@ form textarea{
 .box{
     width: 400px;
     height: 276px;
-    background-image: url("/img/shop400x276.jpg");
+    background-image: url("./img/shop400x276.jpg");
     background-size: cover;
     margin: 0;
     border: 1px solid var(--navbarC);
@@ -446,17 +475,11 @@ form textarea{
 
 .contNos{
   margin:10px;
-  width: 80%;  
+  width: 100%;  
   grid-template-columns: repeat(1,1fr);
   padding: 0;
 }
 
-.mapContainer{
-     
-    display: flex;
-    margin-left: 25px;
-   
-}
 
 
 nav ul {
@@ -510,7 +533,7 @@ nav p{
       
       .contNos{
         margin:10px;
-        width: 80%;
+        width: 100%;
         grid-template-columns: 100%;
         justify-content: center;
         margin: 0;

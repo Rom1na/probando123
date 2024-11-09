@@ -44,7 +44,7 @@ function generarEstructuraProductos(productos) {
         const reseña = document.createElement('div');
         reseña.className = 'rev';
         const enlaceReseña = document.createElement('a');
-        enlaceReseña.href = 'joyeria.html';
+        enlaceReseña.href = `reviews.html?id=${producto.id}`;
         enlaceReseña.innerHTML = `${producto.res} <i class="fa fa-star"></i>`;
         reseña.appendChild(enlaceReseña);
         linea.appendChild(reseña);
@@ -60,11 +60,17 @@ function generarEstructuraProductos(productos) {
         botonAgregar.style.display = 'flex';
         botonAgregar.style.alignItems = 'center';
         botonAgregar.style.gap = '0.5rem';
+        botonAgregar.addEventListener('click',function(){
+            alert('Próximamente  con JS  :D');
+        })
         botonAgregar.textContent = 'Agregar al carrito';
         const iconoCarrito = document.createElement('i');
         iconoCarrito.className = 'fa fa-shopping-cart fa-2x';
         iconoCarrito.setAttribute('aria-hidden', 'true');
         botonAgregar.appendChild(iconoCarrito);
+
+        
+        
 
         const categoria = document.createElement('p');
         categoria.className = 'categoria';
@@ -79,6 +85,10 @@ function generarEstructuraProductos(productos) {
 
         // Añadir la card del producto al contenedor principal
         contenedorPrincipal.appendChild(productoCard);
+
+        
+
+
     });
 
     // Agregar el contenedor principal al body (o a otro contenedor en el DOM)
@@ -86,10 +96,6 @@ function generarEstructuraProductos(productos) {
 
 
     crearFooterRedesSociales(); 
-
-
-
-
 
 
 }
@@ -123,6 +129,8 @@ function crearFooterRedesSociales() {
 
     // Añadir el footer al body (o a otro contenedor en el DOM)
     document.body.appendChild(footer);
+
+    
 }
 
 
@@ -133,9 +141,7 @@ function crearFooterRedesSociales() {
 
 
 
-
-
-async function traerQuerie(url,source){
+async function traerQuerie(url){
 
 try {
     const response = await fetch(url);

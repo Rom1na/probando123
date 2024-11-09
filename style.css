@@ -454,17 +454,15 @@ form textarea{
 
   
 
-
-
-
-
   
 
 /* pantallas más pequeñas */
 
 @media screen and (max-width: 600px) {
 
-    
+
+
+
 .productoCard{
   width: 100%;  
 }
@@ -472,6 +470,10 @@ form textarea{
 .box{
   width: 80%; 
   
+}
+
+.txt{
+  margin: 0;
 }
 
 .contNos{
@@ -553,6 +555,10 @@ nav p{
     .box{
       width: 80%; 
       
+    }
+
+    .txt{
+      margin: 0;
     }
     
     

@@ -6,13 +6,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+   <!--  <link rel="icon" type="image/svg+xml" href="/img/shopping_bag_24dp.svg"> -->
     <link rel="icon" href="img/shopping_bag_24dp.svg" sizes="any" type="image/svg+xml">
     <link rel="stylesheet" href=
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
 
 
-    <title>Tienda Online</title>
+    <title>Contacto</title>
 </head>
 
 <body>
@@ -52,7 +54,6 @@
                                 <p onclick="salir()" id="salir">Salir</p>
                                
                             </div> 
-    
                     
     
                     </div></li>
@@ -60,59 +61,70 @@
         </nav>
             
      </header>
-     <div class="encabezado">
-        <p class="titDisplay">Nosotros</p>
-        <p class="user" id="user"><i class="fa fa-user" style="margin-right: 5px;"></i>Usuario</p>
-    </div>   
 
-    <div class="contNos">
+    <p class="titDisplay" style="margin-left: 25px;">Ingreso</p>
 
-            <div class ="box"> <p class="txtimg">La tienda online © 2024 </p></div>
-              
-            <div class="txt">
-                <p class="descripcion" style="font-size: 1.2em;">Somos una empresa con más de 20 años de experiencia, pionera en comercio electrónico, brindando soluciones de calidad para nuestros clientes y un distinguido canal de distribución para nuestros proveedores </p>
-            </div>
 
+    <div class="contenedor">
+
+         <div class="productoCard">
+             <form action="index.html">
+             
+               
+                <label for="Usuario">Usuario:</label><br>
+                <input type="text" id="Usuario" name="Usuario" ><br>
+                 
+                
+                <br><br><br>
+
+
+
+
+            <div class="footercontenedor">
             
-            <div class="txt">
-                <p class="descripcion" style="font-size: 1.2em;">Visitanos en el Obelisco, uno de los lugares más emblemáticos de nuestro país. <br>Av. 9 de Julio s/n, C1043 Cdad. Autónoma de Buenos Aires </p>
+                <input type="submit" class="subBtn" value="Ingresar">
+                <p class="categoria">Ingresa a nuestra plataforma</p>
                 
             </div>
 
-            <div class="mapContainer">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2638.3311985548!2d-58.38414532506643!3d-34.60373445749759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e1!3m2!1ses!2sar!4v1730587076411!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
-
-
-            
-
-
-
-            
-
+        </form>
+                
+      </div>
+    </div>   
 
      
-    </div>
 
-    <footer id="sm-footer" style="position: fixed;">
-        <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
-           <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
-           <a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
-     <a href="https://youtube.com"><i class="fa fa-youtube"></i></a>
-     
-    </footer>
+     <div style="bottom: 0;">
         
+        <footer id="sm-footer" style="position: fixed">
+            <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+               <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+               <a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
+         <a href="https://youtube.com"><i class="fa fa-youtube"></i></a>
+         
+        </footer>
 
 
-    <script src="funciones.js"></script>
-    <script>
-      obtenerActual();    
-    
-    </script>    
-    
+     </div>
 
+     <script src="funciones.js"></script>
+
+     <script>
+       
+       document.querySelector('form').onsubmit = function(){
+            event.preventDefault();
+            guardarUsuario(document.getElementById('Usuario').value,[])
+            window.location.href='index.html'
+       }
+       
+
+
+
+     </script>
+      
+      
 
     
 </body>
-</html>
+        
+         

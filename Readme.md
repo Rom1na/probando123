@@ -29,3 +29,13 @@ El form fue hecho usando  como action una página de agradecimiento,
 por lo tanto todas la información del submit aparece en la url. 
 No quise modificar los  campos submit  que no utilizo (y asi evitar que aparezcan)
 porque quise respectar la estructura del formulario utlizada en clase.
+
+***Comentarios sobre la segunda entrega   (Entrega Final Diciembre 2024):***
+
+Se modificó la barra de navegación para mejorar la accesibilidad  con nuevas características:
+
+- El usuario ingresa en el login su nombre y de esa forma crea un carrito de compras  ( de ya  existir uno para ese usuario, se carga el carrito guardado en el localStorage.)
+- La estructura del Json de persistencia en el localStorage y las funciones soportan usuarios simultáneos.
+- El carrito es un modal  que se crea con una funcion javascript, recupera la información del localStorage y la presenta en pantalla.
+- El carrito es interactivo, permite cambiar cantidades o eliminar productos, actualizando el importe total de la compra con los diferentes eventos.
+- El botón compra resetea el carrito de compras simulando el vaciado de los items luego de la misma.

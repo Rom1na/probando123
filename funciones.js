@@ -186,7 +186,7 @@ function formatearProductos (data){
     const resultado = data.map( (a) =>({
         id: a.id,
         nombre: a.title,
-        imagen: a.image,
+        imagen: corregirUrlImagen(a.image),
         descripcion: a.description,
         precio : a.price,
         categoria: a.category,
@@ -624,7 +624,7 @@ function totCarro (){
 
    usuario.totalCarro = nuevoTotal;
    localStorage.setItem('usuarios', JSON.stringify(usuarios));
-
+   
    
    
    return nuevoTotal;
@@ -633,4 +633,15 @@ function totCarro (){
 
 
 
+}
+
+
+
+function corregirUrlImagen(urlOriginal) {
+  // Verifica si la URL termina en .jpg
+  if (urlOriginal.endsWith('.jpg')) {
+    // Reemplaza la extensión por _t.png
+    return urlOriginal.replace('.jpg', 't.png');
+  }
+  return urlOriginal; // Si no termina en .jpg, la deja igual
 }

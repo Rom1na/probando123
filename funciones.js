@@ -159,7 +159,6 @@ function traerQuerie(filtro){
 
  
     const productosFiltrados = prods.filter((e)=>e.category == filtro)
-    // words.filter((word) => word.length > 6);
 
     console.log(productosFiltrados);
 
